@@ -1,0 +1,126 @@
+::selection {
+    background-color: #F2A900;
+    color: #1A1A1A;
+}
+
+body {
+    background-image: radial-gradient(#d1cfc7 1px, transparent 1px);
+    background-size: 20px 20px;
+}
+
+.shadow-hard {
+    box-shadow: 6px 6px 0px #1A1A1A;
+}
+
+.shadow-hard-sm {
+    box-shadow: 3px 3px 0px #1A1A1A;
+}
+
+.brutalist-btn {
+    transition: all 0.2s ease;
+    border: 2px solid #1A1A1A;
+    box-shadow: 4px 4px 0px #1A1A1A;
+}
+
+.brutalist-btn:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0px #1A1A1A;
+}
+
+.brutalist-btn:active {
+    transform: translate(2px, 2px);
+    box-shadow: 0px 0px 0px #1A1A1A;
+}
+
+.marquee-content {
+    animation: marquee 20s linear infinite;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.car-silhouette {
+    width: 200px;
+    height: 60px;
+    background: #1A1A1A;
+    position: relative;
+    clip-path: polygon(10% 70%, 20% 40%, 40% 35%, 55% 35%, 65% 35%, 80% 40%, 95% 60%,
+            98% 70%, 95% 85%, 80% 85%, 75% 70%, 25% 70%, 20% 85%, 5% 85%);
+}
+
+.car-silhouette::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 25px;
+    width: 30px;
+    height: 30px;
+    background: #D9381E;
+    border-radius: 50%;
+    box-shadow: 120px 0 0 #D9381E;
+}
+
+.grid-pattern {
+    background-image: linear-gradient(#1A1A1A 1px, transparent 1px),
+        linear-gradient(90deg, #1A1A1A 1px, transparent 1px);
+    background-size: 40px 40px;
+}
+
+h1 {
+    letter-spacing: -0.05em;
+}
+
+h2 {
+    letter-spacing: -0.02em;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.group:hover h1 {
+    animation: shake 0.5s cubic-bezier(.36, .07, .19, .97) both;
+}
+
+@keyframes shake {
+
+    10%,
+    90% {
+        transform: translate3d(-1px, 0, 0);
+    }
+
+    20%,
+    80% {
+        transform: translate3d(2px, 0, 0);
+    }
+
+    30%,
+    50%,
+    70% {
+        transform: translate3d(-4px, 0, 0);
+    }
+
+    40%,
+    60% {
+        transform: translate3d(4px, 0, 0);
+    }
+}
+
+#extra-cards {
+    max-height: 0;
+    overflow: hidden;
+    margin-top: 0;
+    transition: max-height 0.35s ease, margin-top 0.35s ease;
+}
+
+#extra-cards.expanded {
+    max-height: 3000px;
+    margin-top: 2rem;
+}

@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hot Wheels | Original 16</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'pr-cream': '#CCC9BF',
+                        'pr-red': '#D9381E',
+                        'pr-orange': '#F2A900',
+                        'pr-blue': '#4B6B8C',
+                        'pr-black': '#1A1A1A',
+                    },
+                    fontFamily: {
+                        'rubik': ['"Rubik Mono One"', 'sans-serif'],
+                        'space': ['"Space Mono"', 'monospace'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="bg-pr-cream text-pr-black antialiased overflow-x-hidden">
+
+    <!-- Navbar -->
+    <nav class="fixed top-0 w-full border-b-4 border-pr-black bg-pr-cream z-50">
+        <div class="max-w-7xl mx-auto px-4 md:px-6 h-16 md:h-20 flex justify-between items-center">
+            <div class="logo font-rubik text-xl md:text-2xl tracking-tighter text-pr-red">
+                HOT<span class="text-pr-orange">WHEELS</span>
+            </div>
+            <div class="hidden md:flex space-x-8 font-space font-bold uppercase text-sm tracking-widest">
+                <a href="#hero" class="hover:text-pr-red transition-colors">START HERE</a>
+                <a href="#catalog" class="hover:text-pr-red transition-colors">THE DAMAGE</a>
+                <a href="#specs" class="hover:text-pr-red transition-colors">WHY IT'S FAST</a>
+            </div>
+            <div class="flex items-center gap-3">
+                <button id="acquire-btn"
+                    class="brutalist-btn bg-pr-black text-pr-cream px-3 md:px-6 py-2 font-space font-bold uppercase text-xs">
+                    Acquire
+                </button>
+                <button id="mobile-menu-btn" class="md:hidden p-2 border-2 border-pr-black">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden border-t-2 border-pr-black bg-pr-cream">
+            <div class="px-4 py-4 space-y-4 font-space font-bold uppercase text-sm">
+                <a href="#hero" class="block hover:text-pr-red transition-colors">START HERE</a>
+                <a href="#catalog" class="block hover:text-pr-red transition-colors">THE DAMAGE</a>
+                <a href="#specs" class="block hover:text-pr-red transition-colors">WHY IT'S FAST</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="min-h-screen pt-16 md:pt-20 grid grid-cols-1 lg:grid-cols-2 bg-pr-cream">
+        <div
+            class="border-r-0 lg:border-r-4 border-pr-black flex flex-col justify-center p-12 lg:p-24 relative overflow-hidden group bg-pr-cream">
+            <img src="road-texture.jpg" alt=""
+                class="absolute inset-0 w-full h-full object-cover opacity-30 rotate-90 scale-150 pointer-events-none mix-blend-multiply z-0">
+
+            <div class="relative z-10 font-space text-xs uppercase tracking-widest opacity-50 mb-4">
+                Est. 1968 Calif.
+            </div>
+            <h1 class="relative z-10 font-rubik text-4xl sm:text-6xl lg:text-8xl leading-[0.9] text-pr-red mb-8">
+                SPEED<br><span class="text-pr-black">KILLS</span>
+            </h1>
+            <p class="relative z-10 font-space text-lg max-w-md border-l-4 border-pr-orange pl-6 mb-12">
+                Die-cast experiments conducted at irresponsible speeds on bright orange plastic.
+            </p>
+            <div class="relative z-20 flex flex-col sm:flex-row gap-4 sm:gap-6">
+                <button
+                    class="brutalist-btn bg-pr-red text-pr-cream px-8 py-4 font-space font-bold uppercase tracking-widest">
+                    View Collection
+                </button>
+                <div class="flex items-center gap-2 font-space text-xs font-bold uppercase">
+                    <span class="w-2 h-2 bg-pr-black rounded-full block animate-pulse"></span>
+                    Available Now
+                </div>
+            </div>
+
+            <div
+                class="absolute bottom-0 right-0 w-24 h-24 sm:w-32 sm:h-32 bg-pr-orange border-t-4 border-l-4 border-pr-black z-10">
+            </div>
+        </div>
+        <div class="bg-pr-blue border-t-4 lg:border-t-0 border-pr-black relative flex items-center justify-center p-12">
+            <div class="grid-pattern absolute inset-0 opacity-10"></div>
+            <div
+                class="relative z-10 w-full max-w-md aspect-square bg-pr-cream border-4 border-pr-black shadow-hard transform rotate-1 transition-transform duration-500 hover:rotate-0">
+                <div
+                    class="absolute top-4 left-4 font-space text-xs font-bold uppercase bg-pr-black text-pr-cream px-2 py-1">
+                    Fig 1.1
+                </div>
+                <div class="w-full h-full flex items-center justify-center p-8">
+                    <img src="car.png" alt="TWIN MILL" class="w-full h-full object-contain filter drop-shadow-hard">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Marquee -->
+    <div class="border-y-4 border-pr-black bg-pr-orange overflow-hidden py-4">
+        <div
+            class="marquee-content whitespace-nowrap font-rubik text-xl sm:text-2xl md:text-4xl text-pr-black uppercase flex gap-6 md:gap-12">
+            <span>Traction is optional. Vibes are not</span>
+            <span>★</span>
+            <span>So shiny it distracts competitors and small children</span>
+            <span>★</span>
+            <span>Physics tried. We ignored it</span>
+            <span>★</span>
+            <span>Traction is optional. Vibes are not</span>
+            <span>★</span>
+            <span>So shiny it distracts competitors and small children</span>
+            <span>★</span>
+            <span>Physics tried. We ignored it</span>
+            <span>★</span>
+            <span>Traction is optional. Vibes are not</span>
+            <span>★</span>
+            <span>So shiny it distracts competitors and small children</span>
+            <span>★</span>
+            <span>Physics tried. We ignored it</span>
+        </div>
+    </div>
+
+    <!-- Catalog Section -->
+    <section id="catalog" class="py-12 md:py-24 pb-24 md:pb-24 relative overflow-hidden">
+        <img src="road-texture.jpg" alt=""
+            class="absolute inset-0 w-full h-full object-cover opacity-20 rotate-90 scale-[3] pointer-events-none mix-blend-multiply z-0">
+
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="flex justify-between items-end mb-16 border-b-4 border-pr-black pb-6">
+                <h2 class="font-rubik text-2xl sm:text-3xl md:text-5xl text-pr-black">WHERE IT ALL WENT SLIGHTLY WRONG
+                </h2>
+                <span class="font-space font-bold top-0 hidden md:block">NO. 1-4</span>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div
+                    class="catalog-item bg-pr-cream border-4 border-pr-black p-6 hover:-translate-y-2 hover:shadow-hard transition-all duration-300">
+                    <div
+                        class="h-48 bg-white border-2 border-pr-black mb-6 flex items-center justify-center relative overflow-hidden">
+                        <img src="1.png" alt="Custom Camaro" class="w-full h-full object-contain p-2">
+                    </div>
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="font-rubik text-xl leading-none">CUSTOM<br>CAMARO</h3>
+                        <span class="font-space text-xs font-bold bg-pr-black text-white px-1">1968</span>
+                    </div>
+                    <p class="font-space text-xs leading-relaxed text-gray-600 mb-6">
+                        The first Hot Wheels car. Accidentally created an entire global obsession.
+                    </p>
+                    <div class="flex gap-2">
+                        <span class="w-4 h-4 rounded-full border-2 border-black bg-blue-500"></span>
+                        <span class="w-4 h-4 rounded-full border-2 border-black bg-green-500"></span>
+                        <span class="w-4 h-4 rounded-full border-2 border-black bg-orange-500"></span>
+                    </div>
+                </div>
+
+                <div
+                    class="catalog-item bg-pr-cream border-4 border-pr-black p-6 hover:-translate-y-2 hover:shadow-hard transition-all duration-300">
+                    <div
+                        class="h-48 bg-white border-2 border-pr-black mb-6 flex items-center justify-center relative overflow-hidden">
+                        <img src="2.png" alt="Custom Corvette" class="w-full h-full object-contain p-2">
+                    </div>
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="font-rubik text-xl leading-none">CUSTOM<br>CORVETTE</h3>
+                        <span class="font-space text-xs font-bold bg-pr-black text-white px-1">1968</span>
+                    </div>
+                    <p class="font-space text-xs leading-relaxed text-gray-600 mb-6">
+                        Shark-nosed confidence with zero regard for subtlety or parking safety.
+                    </p>
+                    <div class="flex gap-2">
+                        <span class="w-4 h-4 rounded-full border-2 border-black bg-red-600"></span>
+                        <span class="w-4 h-4 rounded-full border-2 border-black bg-purple-500"></span>
+                    </div>
+                </div>
+
+                <div
+                    class="catalog-item bg-pr-cream border-4 border-pr-black p-6 hover:-translate-y-2 hover:shadow-hard transition-all duration-300">
+                    <div
+                        class="h-48 bg-white border-2 border-pr-black mb-6 flex items-center justify-center relative overflow-hidden">
+                        <img src="3.png" alt="Deora" class="w-full h-full object-contain p-2">
+                    </div>
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="font-rubik text-xl leading-none">DEORA</h3>
+                        <span class="font-space text-xs font-bold bg-pr-black text-white px-1">1968</span>
+                    </div>
+                    <p class="font-space text-xs leading-relaxed text-gray-600 mb-6">
+                        A surf truck from the future that somehow time-traveled to 1968.
+                    </p>
+                    <div class="flex gap-2">
+                        <span class="w-4 h-4 rounded-full border-2 border-black bg-yellow-400"></span>
+                        <span class="w-4 h-4 rounded-full border-2 border-black bg-teal-500"></span>
+                    </div>
+                </div>
+
+                <div
+                    class="catalog-item bg-pr-cream border-4 border-pr-black p-6 hover:-translate-y-2 hover:shadow-hard transition-all duration-300">
+                    <div
+                        class="h-48 bg-white border-2 border-pr-black mb-6 flex items-center justify-center relative overflow-hidden">
+                        <img src="4.png" alt="Twin Mill" class="w-full h-full object-contain p-2">
+                    </div>
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="font-rubik text-xl leading-none">TWIN<br>MILL</h3>
+                        <span class="font-space text-xs font-bold bg-pr-black text-white px-1">1968</span>
+                    </div>
+                    <p class="font-space text-xs leading-relaxed text-gray-600 mb-6">
+                        Two engines because one simply wasn't ridiculous enough.
+                    </p>
+                    <div class="flex gap-2">
+                        <span class="w-4 h-4 rounded-full border-2 border-black bg-indigo-600"></span>
+                        <span class="w-4 h-4 rounded-full border-2 border-black bg-pink-500"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div id="extra-cards" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div
+                    class="catalog-item bg-pr-cream border-4 border-pr-black p-6 hover:-translate-y-2 hover:shadow-hard transition-all duration-300">
+                    <div
+                        class="h-48 bg-white border-2 border-pr-black mb-6 flex items-center justify-center relative overflow-hidden">
+                        <img src="5.png" alt="Bone Shaker" class="w-full h-full object-contain p-2">
+                    </div>
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="font-rubik text-xl leading-none">BONE<br>SHAKER</h3>
+                        <span class="font-space text-xs font-bold bg-pr-black text-white px-1">1968</span>
+                    </div>
+                    <p class="font-space text-xs leading-relaxed text-gray-600 mb-6">
+                        A skull-faced menace built exclusively to intimidate other toy cars.
+                    </p>
+                    <div class="flex gap-2">
+                        <span class="w-4 h-4 rounded-full border-2 border-black bg-emerald-500"></span>
+                        <span class="w-4 h-4 rounded-full border-2 border-black bg-amber-500"></span>
+                    </div>
+                </div>
+
+                <div
+                    class="catalog-item bg-pr-cream border-4 border-pr-black p-6 hover:-translate-y-2 hover:shadow-hard transition-all duration-300">
+                    <div
+                        class="h-48 bg-white border-2 border-pr-black mb-6 flex items-center justify-center relative overflow-hidden">
+                        <img src="6.png" alt="Roger Dodger" class="w-full h-full object-contain p-2">
+                    </div>
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="font-rubik text-xl leading-none">ROGER<br>DODGER</h3>
+                        <span class="font-space text-xs font-bold bg-pr-black text-white px-1">1968</span>
+                    </div>
+                    <p class="font-space text-xs leading-relaxed text-gray-600 mb-6">
+                        Pure muscle energy with an attitude problem and excellent acceleration.
+                    </p>
+                    <div class="flex gap-2">
+                        <span class="w-4 h-4 rounded-full border-2 border-black bg-sky-500"></span>
+                        <span class="w-4 h-4 rounded-full border-2 border-black bg-rose-500"></span>
+                    </div>
+                </div>
+
+                <div
+                    class="catalog-item bg-pr-cream border-4 border-pr-black p-6 hover:-translate-y-2 hover:shadow-hard transition-all duration-300">
+                    <div
+                        class="h-48 bg-white border-2 border-pr-black mb-6 flex items-center justify-center relative overflow-hidden">
+                        <img src="7.png" alt="Red Baron" class="w-full h-full object-contain p-2">
+                    </div>
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="font-rubik text-xl leading-none">RED<br>BARON</h3>
+                        <span class="font-space text-xs font-bold bg-pr-black text-white px-1">1968</span>
+                    </div>
+                    <p class="font-space text-xs leading-relaxed text-gray-600 mb-6">
+                        World War One helmet. On a car. Nobody stopped this.
+                    </p>
+                    <div class="flex gap-2">
+                        <span class="w-4 h-4 rounded-full border-2 border-black bg-violet-500"></span>
+                        <span class="w-4 h-4 rounded-full border-2 border-black bg-lime-500"></span>
+                    </div>
+                </div>
+
+                <div
+                    class="catalog-item bg-pr-cream border-4 border-pr-black p-6 hover:-translate-y-2 hover:shadow-hard transition-all duration-300">
+                    <div
+                        class="h-48 bg-white border-2 border-pr-black mb-6 flex items-center justify-center relative overflow-hidden">
+                        <img src="8.png" alt="Beatnik Bandit" class="w-full h-full object-contain p-2">
+                    </div>
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="font-rubik text-xl leading-none">BEATNIK<br>BANDIT</h3>
+                        <span class="font-space text-xs font-bold bg-pr-black text-white px-1">1968</span>
+                    </div>
+                    <p class="font-space text-xs leading-relaxed text-gray-600 mb-6">
+                        A bubble-topped fever dream that predicted the future slightly incorrectly.
+                    </p>
+                    <div class="flex gap-2">
+                        <span class="w-4 h-4 rounded-full border-2 border-black bg-cyan-500"></span>
+                        <span class="w-4 h-4 rounded-full border-2 border-black bg-fuchsia-500"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-16 text-center">
+                <button id="toggle-catalog"
+                    class="inline-block border-b-2 border-pr-black font-space font-bold uppercase hover:bg-pr-orange hover:text-white transition-colors px-2 cursor-pointer bg-transparent">
+                    <span id="toggle-text">UNLOCK THE REST →</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Specs Section -->
+    <section id="specs" class="bg-pr-black text-pr-cream py-24 border-t-4 border-pr-orange">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16">
+            <div>
+                <h2 class="font-rubik text-3xl md:text-5xl mb-8 md:mb-12 text-pr-orange">SERIOUS ENGINEERING,<br>SILLY
+                    OUTCOME</h2>
+                <div class="font-space space-y-8">
+
+                    <div class="border-l-2 border-pr-cream pl-6">
+                        <h4 class="text-xs uppercase tracking-widest text-gray-400 mb-2">VISUAL OVERKILL</h4>
+                        <p class="text-xl font-bold">Spectraflame™ paint so reflective it becomes a competitive
+                            advantage.</p>
+                    </div>
+                    <div class="border-l-2 border-pr-cream pl-6">
+                        <h4 class="text-xs uppercase tracking-widest text-gray-400 mb-2">GROUND CONTACT (ALLEGEDLY)</h4>
+                        <p class="text-xl font-bold">Redline wheels optimized for speed, chaos, and dramatic track
+                            exits.</p>
+                    </div>
+                    <div class="border-l-2 border-pr-cream pl-6">
+                        <h4 class="text-xs uppercase tracking-widest text-gray-400 mb-2">PROBABLY TOO FAST</h4>
+                        <p class="text-xl font-bold">Low-friction axles designed to disrespect gravity at a 1:64 scale.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="border-4 border-pr-cream p-4 relative">
+                <div class="absolute top-0 right-0 bg-pr-cream text-pr-black px-4 py-1 font-space font-bold text-xs">
+                    HONEYCOMB DISPLAY</div>
+                <div
+                    class="h-full w-full border-2 border-dashed border-gray-600 flex items-center justify-center p-8 overflow-hidden">
+                    <img src="honeycomb-display.png" alt="Hot Wheels Collection Display"
+                        class="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity duration-300">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-pr-cream border-t-4 border-pr-black py-12">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8">
+            <div class="text-center md:text-left">
+                <div class="font-rubik text-xl text-pr-black">MATTEL INC.</div>
+                <p class="font-space text-xs text-gray-500 mt-2">© 1968 HAWTHORNE, CALIF. U.S.A.</p>
+            </div>
+            <div class="flex gap-6 font-space text-sm font-bold underline">
+                <a href="#" class="hover:text-pr-red">Terms</a>
+                <a href="#" class="hover:text-pr-red">Privacy</a>
+                <a href="#" class="hover:text-pr-red">Heritage</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Email Popup Modal -->
+    <div id="email-modal" class="fixed inset-0 z-[100] hidden">
+        <div id="modal-backdrop" class="absolute inset-0 bg-pr-black/80"></div>
+
+        <div class="absolute inset-0 flex items-center justify-center p-4">
+            <div class="bg-pr-cream border-4 border-pr-black shadow-hard max-w-md w-full p-8 relative">
+                <button id="modal-close"
+                    class="absolute top-4 right-4 font-rubik text-2xl hover:text-pr-red transition-colors">×</button>
+
+                <div class="mb-6">
+                    <span class="font-space text-xs font-bold bg-pr-orange text-white px-2 py-1">LIMITED DROP</span>
+                    <h3 class="font-rubik text-3xl mt-4 leading-tight">GET ON THE<br>WAITLIST</h3>
+                </div>
+
+                <p class="font-space text-sm text-gray-600 mb-6">
+                    Be first to know when the Original 16 collection becomes available. No spam, just speed.
+                </p>
+
+                <form id="email-form" class="space-y-4">
+                    <div>
+                        <input type="email" id="email-input" placeholder="your@email.com" required
+                            class="w-full border-2 border-pr-black px-4 py-3 font-space text-sm bg-white focus:outline-none focus:border-pr-orange transition-colors">
+                    </div>
+                    <button type="submit"
+                        class="brutalist-btn w-full bg-pr-red text-white px-6 py-3 font-space font-bold uppercase text-sm hover:bg-pr-black transition-colors">
+                        Join Waitlist →
+                    </button>
+                </form>
+
+                <p class="font-space text-xs text-gray-400 mt-4 text-center">
+                    ★ Already 2,847 collectors waiting ★
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
